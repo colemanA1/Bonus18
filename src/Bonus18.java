@@ -28,9 +28,11 @@ public class Bonus18 {
 
         //asks for user info and makes sure input is either a y or no
         System.out.println("                      WHAT IS YOUR NAME?");
+        System.out.print(">");
         name = scan.nextLine();
         System.out.println("            ARE YOU SURE YOU WANT TO PLAY " + name + "?");
         System.out.println("                         START(y/n)?");
+        System.out.print(">");
         String start = scan.nextLine();
         if(!start.equals("y") && !start.equals("n")){
             System.out.println("That was not an option. Try again!");
@@ -42,6 +44,7 @@ public class Bonus18 {
             case "y":
                 System.out.println("What item will you choose to start with?\n"
                 +     "Sword or Flashlight?");
+                System.out.print(">");
                 break;
             case "n":
                 System.out.println("You have accepted defeat.");
@@ -66,6 +69,7 @@ public class Bonus18 {
                 + "you can barely see the sun peeking through the canopy. As the light fades, you hear a distant low rumble. \n"
                 + "After a few minutes you barely make out a fork in the road.  Which way do you decide to go? \n"
                 + "Left or Right?");
+                System.out.print(">");
                 String path = scan.nextLine();
                 if(!path.equals("left")&&!path.equals("right")){
                     System.out.println("You must choose a path");
@@ -112,6 +116,7 @@ public class Bonus18 {
                 +"To the left shows a man falling.  To the right shows a terrible monster. You keep walking on and \n"
                 +"sure enough after a few minutes you come to a fork in the road. Which way do you choose to go?\n"
                 +"Left or Right?");
+                System.out.print(">");
                 path = scan.nextLine();
                 if(!path.equals("left")&&!path.equals("right")){
                     System.out.println("You must choose a path");
