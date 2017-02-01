@@ -52,10 +52,13 @@ public class Bonus18 {
         }
             String tool = scan.nextLine();
 
+        //prevents user from picking something other than the two options.
         if(!tool.equals("sword") && !tool.equals("flashlight")){
             System.out.println("You must pick one of these items: Sword or Flashlight");
             tool = scan.nextLine();
         }
+
+        //Decision tree if user picks sword
         switch (tool){
             case "sword":
                 System.out.println("You have chosen to fight first!");
@@ -69,6 +72,7 @@ public class Bonus18 {
                     path = scan.nextLine();
                 }
 
+                //Decision tree user picks sword and the left path
                 switch(path) {
                     case "left":
                         System.out.println("You trudge left, swinging your sword through the thicket in front of you \n"
@@ -83,6 +87,7 @@ public class Bonus18 {
                         System.exit(1);
                         break;
 
+                        //Decision tree user picks sword and right path
                     case "right":
                         System.out.println("You trudge right, swinging your sword through the thicket in front of you \n"
                         +"walking slowly. You can barely see.  After a few minutes it's so bad that you must use the \n"
@@ -97,6 +102,8 @@ public class Bonus18 {
                         break;
                 }
 
+
+            //Decision tree user picks flashlight
             case "flashlight":
                 System.out.println("You have chosen to see in the dark first!");
                 System.out.println("You enter the thick forrest. The trees rise high above you and about 20 paces in \n"
@@ -110,7 +117,11 @@ public class Bonus18 {
                     System.out.println("You must choose a path");
                     path = scan.nextLine();
                 }
+                //Decision tree user picks flashlight and branches to left or right
                 switch(path) {
+
+                    //Decision tree user picks flashlight and left
+                    //Only choice allowing user to win
                     case "left":
                         System.out.println("You trudge left, shining your flashlight across the path in front of you. \n"
                        +"You figure better to face gravity than to face a monster. After a few minutes you come across\n"
@@ -126,6 +137,8 @@ public class Bonus18 {
                        +"CONGRATULATIONS " + name);
                         System.exit(1);
                         break;
+
+                    //Decision tree user picks flashlight and right
                     case "right":
                         System.out.println("You trudge right, swinging the flashlight across the path in front of you. \n"
                         +"The path starts to grow more and more crooked even the rees become more menacing. Signs of the\n"
